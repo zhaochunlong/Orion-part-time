@@ -1,0 +1,99 @@
+.dowphead{
+  height: 100px;
+  line-height: 100px;
+}
+
+/*表单*/
+.jobname{
+  margin-left: -40px;
+  width: 100px;
+  height: 100px;
+}
+.jobname1{
+  /*margin-left: -40px;*/
+  width: 300px;
+  height: 30px;
+}
+.sel{
+  width: 200px;
+  height: 30px;
+}
+.nav-divs{
+  margin-top: 20px;
+}
+.subbtn{
+  margin: 20px auto;
+}
+/*//结束*/
+
+.hearde{
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  float: left;
+  position: relative;
+}
+.butn{
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  border-radius: 2px;
+}
+
+/*.userIcon{*/
+/*width: 70px;*/
+/*height: 30px;*/
+/*position: absolute;*/
+/*top: 20px;*/
+/*left: 100px;*/
+/*display:block;*/
+/*opacity: 0;*/
+/*!*background-color: #00B7FF;*!*/
+/*}*/
+
+/*#myPic{*/
+/*margin-left: -20px;*/
+/*float: left;*/
+/*width: 100px;*/
+/*height: 100px;*/
+/*}*/
+
+/*.herade{*/
+/*width: 100px;*/
+/*height: 100px;*/
+/*float: left;*/
+/*color: #b9def0;*/
+/*}*/
+/*input{*/
+/*margin-top: 20px;*/
+/*margin-right: 50px;*/
+/*}*/
+input[type=text]{
+  width: 200px;
+  height: 30px;
+  background-color: ghostwhite;
+  border: 1px solid #b9def0;
+}
+button{
+  margin: 40px;
+  background-color:#b9def0;
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+}
+.imgs{
+  background: url("../../../assets/images/1.jpg");
+}
+.imagss{
+  width: 100px;
+  height: 100px;
+}
+.headspan{
+  width: 70px;
+  height: 30px;
+  border-radius: 2px;
+  color: dodgerblue;
+  font-size: 17px
+}
+

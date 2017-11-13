@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <!--各个小组件的row带有背景颜色-->
+    <h1>个人中心</h1>
+    <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1  imgs" style="background-color:white;text-align: center">
+      <ul class="nav nav-pills nav-stacked" style="color: black;width: 100px;margin-left: -18px">
+        <!--<table>-->
+        <!--<tr>-->
+        <!--<td><a routerLink="./user_join">我的报名</a></td> -->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td><a routerLink="./user_intention">兼职意向</a></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td><a routerLink="user_info">个人信息</a></td>-->
+        <!--</tr>-->
+
+        <!--</table>-->
+        <li><a routerLink="./user_join">我的报名</a></li>
+        <!--<li><a routerLink="./user_intention">兼职意向</a></li>-->
+        <li><a routerLink="user_info">个人信息</a></li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<!--<div style="width: 100%;height: 100px;background-color: #FFAA2C"></div>-->
+

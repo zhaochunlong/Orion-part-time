@@ -1,0 +1,239 @@
+<script src="../../../../../home.component.ts"></script>
+<nav class="navbar navbar-default  navbar-fixed-top">
+  <div class="container-fluid cont">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="leftlogo">
+        <span>
+            <img class="logo" src="../../assets/images/logo.png" alt="logo"style="width: 70px;height: 50px">
+          </span>
+        <span class="fontsi"style="color: #FFCA00">猎户兼职</span>
+        <a class="div-header-two"style="color:#555555;font-size: 15px ">苏州
+          <span class="caret"></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/index">首页</a>
+        </li>
+        <li><a routerLink="/position">职位</a></li>
+        <!--<li><a routerLink="/spy">斗米特工</a></li>-->
+        <li><a routerLink="/company/check">企业版</a></li>
+        <li><a routerLink="/user">个人中心</a></li>
+      </ul>
+      <ul id="user" class="nav navbar-nav navbar-right" style="margin-right: 50px">
+
+
+
+        <button id="login_btn" *ngIf="!hiddenNavs" class="btnf" data-toggle="modal" data-target="#login" style="height: 0;border: none;padding: 0px">
+        <li  class="lrbtn" style="height: 40px;margin-top: 5px;margin-right: 10px">登录</li>
+        </button>
+        <button  class="btnf" *ngIf="!hiddenNavs" data-toggle="modal" data-target="#register" style="height: 0;border: none;padding: 0px">
+          <li  class="lrbtn" style="height: 40px;margin-top: 5px">注册</li>
+        </button>
+
+
+        <li id="block" *ngIf="hiddenNavs" (mouseenter)="funcShowSelect()" (mouseleave)="funcHiden()" style="float: right">
+          {{userName}}
+          <div class="dropdown" id="dropout" *ngIf="showSelect" (click)="log_out()">
+            退出登录
+            </div>
+          </li>
+
+      </ul>
+    </div>
+
+
+
+  </div>
+</nav>
+
+
+<div  id="login" class="modal fade" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-title">
+        <h3 class="text-center login_title">猎户登录</h3>
+      </div>
+      <div class="modal-body">
+        <form class="form-group" action="" #loginForm="ngForm">
+          <div class="form-group">
+            <label for="telephone">用户名</label>
+            <input id="telephone" name="telephone" class="form-control modcs" #_name="ngModel" pattern="^1[34578]\d{9}$" [(ngModel)]="telephone" type="text" placeholder="请输入用户名" required style="padding: 0">
+          </div>
+          <div class="form-group prompt">
+            <div *ngIf="_name.invalid && (_name.dirty||_name.touched)">
+              <div *ngIf="_name.errors.required">
+                号码不能为空
+              </div>
+              <div *ngIf="_name.errors.pattern">
+                号码格式错误
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">密码</label>
+            <input id="password" name="password" #_password="ngModel" class="form-control" minlength="6" [(ngModel)]="password" type="password" placeholder="请输入密码" required>
+          </div>
+          <div class="form-group prompt">
+            <div *ngIf="_password.invalid && (_password.dirty||_password.touched)">
+              <div *ngIf="_password.errors.required">
+                密码不能为空
+              </div>
+              <div *ngIf="_password.errors.minlength">
+                密码格式错误
+              </div>
+            </div>
+          </div>
+          <div class="text-right">
+            <button class="btn login_btn" type="submit" (click)=tologin(loginForm)>登录</button>
+            <button id="closeBtn" class="btn cancel_btn" data-dismiss="modal">取消</button>
+          </div>
+          <div  class="login_res">
+            {{login_res}}
+          </div>
+          <a href="" class="text-right" data-toggle="modal" data-dismiss="modal" data-target="#register">还没有账号？点我注册</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!----------------------------------------------------------------------------创建注册模态框-->
+
+<div id="register" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-title">
+        <h3 class="text-center login_title">猎户注册</h3>
+      </div>
+      <div class="modal-body">
+        <form class="form-group" action="" #registerForm="ngForm">
+          <!-------------------------------------------用户名框-->
+          <div class="form-group">
+            <label>用户名</label>
+            <input class="form-control" id="regist_name" pattern="^[a-zA-Z0-9_-]{4,16}$" name="regist_name" #regist_user_name="ngModel" type="text" placeholder="请4-12位英文或者数字" [(ngModel)]="regist_name_user" required>
+          </div>
+          <!------------------------------------------验证用户名-->
+          <div class="form-group prompt">
+            <div *ngIf="regist_user_name.invalid && (regist_user_name.dirty||regist_user_name.touched)">
+              <div *ngIf="regist_user_name.errors.required">
+                用户名不能为空
+              </div>
+              <div *ngIf="regist_user_name.errors.pattern">
+                用户名格式错误
+              </div>
+            </div>
+          </div>
+          <!------------------------------------------手机号框-->
+          <div class="form-group">
+            <label>手机号</label>
+            <input class="form-control" id="regist_telephone" pattern="^1[34578]\d{9}$" name="regist_telephone" #regist_name="ngModel" type="text" placeholder="请输入手机号" [(ngModel)]="regist_telephone" required>
+          </div>
+          <!-----------------------------------------验证手机号-->
+          <div class="form-group prompt">
+            <div *ngIf="regist_name.invalid && (regist_name.dirty||regist_name.touched)">
+              <div *ngIf="regist_name.errors.required">
+                手机号不能为空
+              </div>
+              <div *ngIf="regist_name.errors.pattern">
+                手机号格式错误
+              </div>
+            </div>
+          </div>
+          <!---------------------------------------------密码框-->
+          <div class="form-group">
+            <label>密码</label>
+            <input class="form-control" type="password" id="regist_password" name="regist_password" minlength="6" #regist_password="ngModel" placeholder="至少6位字母或数字" [(ngModel)]="regist_pwd" required>
+          </div>
+          <!---------------------------------------------验证密码-->
+          <div class="form-group prompt">
+            <div *ngIf="regist_password.invalid && (regist_password.dirty||regist_password.touched)">
+              <div *ngIf="regist_password.errors.required">
+                密码不能为空
+              </div>
+              <div *ngIf="regist_password.errors.minlength">
+                密码格式错误
+              </div>
+            </div>
+          </div>
+          <!--------------------------------------------再次输入密码框-->
+          <div class="form-group">
+            <label>再次输入密码</label>
+            <input class="form-control" type="password" name="regist_password_sure" minlength="50" #regist_pwd_sure="ngModel" [(ngModel)]="regist_pwd_su" placeholder="至少6位字母或数字" required>
+          </div>
+          <!-------------------------------------------------验证二次密码-->
+          <div class="form-group prompt">
+            <div *ngIf="regist_pwd_sure.invalid && (regist_pwd_sure.dirty||regist_pwd_sure.touched)">
+              <div *ngIf="regist_pwd_sure.errors.required">
+                请再次输入密码
+              </div>
+              <div *ngIf="ispass()">
+                密码前后不一致
+              </div>
+            </div>
+          </div>
+          <!----------------------------------------------邮箱框-->
+          <div class="form-group">
+            <label >邮箱</label>
+            <input class="form-control" type="email"
+                   pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$"
+                   placeholder="例如:123@123.com" #email="ngModel" [(ngModel)]="_email" required
+                   id="email" name="email">
+          </div>
+          <!-----------------------------------------------验证邮箱-->
+          <div class="form-group prompt">
+            <div *ngIf="email.invalid && (email.dirty||email.touched)">
+              <div *ngIf="email.errors.required">
+                请输入邮箱
+              </div>
+              <div *ngIf="email.errors.pattern">
+                邮箱格式不正确
+              </div>
+            </div>
+          </div>
+
+          <!----------------------------------------------验证码-->
+          <div class="text-right" style="margin-top: 50px">
+            <input type="text"#code="ngModel" [(ngModel)]="_code" name="_code" style="width: 405px">
+
+            <button class="btn login_btn" type="button"*ngIf="!_gain" (click)="Gain(registerForm)">获取验证码</button>
+
+            <button class="btn login_btn" type="button" *ngIf="_gain" (click)="Gain(registerForm)">{{gain_mes}}</button>
+          </div>
+          <!---------------------------------------------提交按钮-->
+          <div class="text-right" style="margin-top: 30px">
+            <button class="btn login_btn" type="submit" (click)="toregist(registerForm)">注册</button>
+            <button id="closeBtnR" class="btn cancel_btn" data-dismiss="modal">取消</button>
+          </div>
+          <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <br>
+  <br>
+  <br>
+  <br>
+<router-outlet></router-outlet>
+</div>
+

@@ -1,0 +1,372 @@
+
+<div class="big-body">
+  <div class="div-body">
+    <div class="div-body-crumbs">
+      <span><a routerLink="/index">首页></a></span>
+      <a href="#">苏州兼职网</a>
+    </div>
+    <div class="luobotu">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="../../assets/images/position/lunbo1.jpg" alt="First slide">
+          </div>
+          <div class="item">
+            <img src="../../assets/images/position/lunbo2.jpg" alt="Second slide">
+          </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="#myCarousel"
+           data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel"
+           data-slide="next">&rsaquo;</a>
+      </div>
+
+    </div>
+    <div class="body-a"  >
+      <div class="zhiwei"  >职位:</div>
+      <!--////////////////////////////////9-25-->
+      <div class="div-img">
+        <span><img src="./../../assets/images/position/position1.png" alt=""></span>
+        <span><img src="./../../assets/images/position/position2.png" alt=""></span>
+        <span><img src="./../../assets/images/position/position3.png" alt=""  ></span>
+        <span><img src="./../../assets/images/position/position4.png" alt=""  ></span>
+        <span><img src="./../../assets/images/position/position5.png" alt=""  ></span>
+        <span><img src="./../../assets/images/position/position6.png" alt=""  ></span>
+        <span><img src="./../../assets/images/position/position7.png" alt=""  ></span>
+        <span><img src="./../../assets/images/position/position8.png" alt=""  ></span>
+        <span><img src="./../../assets/images/position/position9.png" alt=""  ></span>
+      </div>
+
+
+      <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist" >
+          <li role="presentation" class="active">
+            <a href="#热门职位" aria-controls="热门职位" role="tab" data-toggle="tab" style="color: black">热门职位</a>
+          </li>
+          <li role="presentation"><a href="#简单易做" aria-controls="简单易做" role="tab" data-toggle="tab" style="color: black">简单易做</a></li>
+          <li role="presentation"><a href="#跑腿办事" aria-controls="跑腿办事" role="tab" data-toggle="tab" style="color: black">跑腿办事</a></li>
+          <li role="presentation"><a href="#室内推荐" aria-controls="室内推荐" role="tab" data-toggle="tab" style="color: black">室内推荐</a></li>
+
+          <li role="presentation"><a href="#体力达人" aria-controls="体力达人" role="tab" data-toggle="tab" style="color: black">体力达人</a></li>
+          <li role="presentation"><a href="#专业技能" aria-controls="专业技能" role="tab" data-toggle="tab" style="color: black">专业技能</a></li>
+          <li role="presentation"><a href="#演艺达人" aria-controls="演艺达人" role="tab" data-toggle="tab" style="color: black">演艺达人</a></li>
+          <li role="presentation"><a href="#特色职位" aria-controls="特色职位" role="tab" data-toggle="tab" style="color: black">特色职位</a></li>
+          <li role="presentation"><a href="#优秀青年" aria-controls="优秀青年" role="tab" data-toggle="tab" style="color: black">优秀青年</a></li>
+        </ul>
+
+
+        <!-- Tab panes -->
+        <div class="tab-content"style="margin-left: 6%">
+          <div role="tabpanel" class="tab-pane active zhiwei-a" id="热门职位">
+            <span style="color: #FFCA00">全部兼职</span>
+            <a href="javascript:void (null)" (click)="jobtype('潮兼职')">潮兼职</a>
+            <a href="javascript:void (null)" (click)="jobtype('传单派发')">传单派发</a>
+            <a href="javascript:void (null)" (click)="jobtype('服务员')">服务员</a>
+            <a href="javascript:void (null)" (click)="jobtype('促销导购')">促销导购</a>
+            <a href="javascript:void (null)" (click)="jobtype('打包分拣')">打包分拣</a>
+            <a href="javascript:void (null)" (click)="jobtype('礼仪模特')">礼仪模特</a>
+            <a href="javascript:void (null)" (click)="jobtype('话务客服')">话务客服</a>
+            <a href="javascript:void (null)" (click)="jobtype('家教助教')">家教助教</a>
+            <a href="javascript:void (null)" (click)="jobtype('充场')">充场</a>
+            <a href="javascript:void (null)" (click)="jobtype('问卷调查')">问卷调查</a>
+            <a href="javascript:void (null)" (click)="jobtype('会展协助')">会展协助</a>
+          </div>
+          <div role="tabpanel" class="tab-pane zhiwei-a" id="简单易做">
+            <a href="javascript:void (null)" (click)="jobtype('传单派发')">传单派发</a>
+            <a href="javascript:void (null)" (click)="jobtype('地推拉访')">地推拉访</a>
+            <a href="javascript:void (null)" (click)="jobtype('打包分拣 ')">打包分拣</a>
+            <a href="javascript:void (null)" (click)="jobtype('充场')">充场</a>
+            <a href="javascript:void (null)" (click)="jobtype('问卷调查')">问卷调查</a>
+            <a href="javascript:void (null)" (click)="jobtype('审核录入')">审核录入</a>
+          </div>
+          <div role="tabpanel" class="tab-pane zhiwei-a" id="跑腿办事">
+            <a href="javascript:void (null)" (click)="jobtype('挂号排队')">挂号排队</a>
+            <a href="javascript:void (null)" (click)="jobtype('送餐员')">送餐员</a>
+            <a href="javascript:void (null)" (click)="jobtype('宠物寄养')">宠物寄养</a>
+            <a href="javascript:void (null)" (click)="jobtype('车票代购')">车票代购</a>
+          </div>
+          <div role="tabpanel" class="tab-pane zhiwei-a" id="室内推荐">
+            <a href="javascript:void (null)" (click)="jobtype('话务客服')">话务客服</a>
+            <a href="javascript:void (null)" (click)="jobtype('促销导购')">促销导购</a>
+            <a href="javascript:void (null)" (click)="jobtype('文员')">文员</a>
+            <a href="javascript:void (null)" (click)="jobtype('展会协助')">展会协助</a>
+          </div>
+          <div role="tabpanel" class="tab-pane zhiwei-a" id="体力达人">
+            <a href="javascript:void (null)" (click)="jobtype('餐饮工')">餐饮工</a>
+            <a href="javascript:void (null)" (click)="jobtype('服务员')">服务员</a>
+            <a href="javascript:void (null)" (click)="jobtype('安保')">安保</a>
+            <a href="javascript:void (null)" (click)="jobtype('会展执行')">会展执行</a>
+          </div>
+          <div role="tabpanel" class="tab-pane zhiwei-a" id="专业技能">
+            <a href="javascript:void (null)" (click)="jobtype('司机代驾')">司机代驾</a>
+            <a href="javascript:void (null)" (click)="jobtype('技师技工')">技师技工</a>
+            <a href="javascript:void (null)" (click)="jobtype('美容美发')">美容美发</a>
+            <a href="javascript:void (null)" (click)="jobtype('月嫂阿姨')">月嫂阿姨</a>
+
+          </div>
+          <div role="tabpanel" class="tab-pane zhiwei-a" id="演艺达人">
+            <a href="javascript:void (null)" (click)="jobtype('礼仪模特')">礼仪模特</a>
+            <a href="javascript:void (null)" (click)="jobtype('群众演员')">群众演员</a>
+            <a href="javascript:void (null)" (click)="jobtype('演出')">演出</a>
+          </div>
+          <div role="tabpanel" class="tab-pane zhiwei-a" id="特色职位">
+            <a href="javascript:void (null)" (click)="jobtype('校园代理')">校园代理</a>
+            <a href="javascript:void (null)" (click)="jobtype('家教助教')">家教助教</a>
+            <a href="javascript:void (null)" (click)="jobtype('健身教练')">健身教练</a>
+            <a href="javascript:void (null)" (click)="jobtype('翻译')">翻译</a>
+            <a href="javascript:void (null)" (click)="jobtype('婚礼主持')">婚礼主持</a>
+            <a href="javascript:void (null)" (click)="jobtype('摄影摄像')">摄影摄像</a>
+            <a href="javascript:void (null)" (click)="jobtype('旅行导游')">旅行导游</a>
+            <a href="javascript:void (null)" (click)="jobtype('美工设计')">美工设计</a>
+            <a href="javascript:void (null)" (click)="jobtype('创意策划')">创意策划</a>
+            <a href="javascript:void (null)" (click)="jobtype('财务会计')">财务会计</a>
+            <a href="javascript:void (null)" (click)="jobtype('项目外包')">项目外包</a>
+            <a href="javascript:void (null)" (click)="jobtype('软件开发')">软件开发</a>
+
+          </div>
+          <div role="tabpanel" class="tab-pane zhiwei-a" id="优秀青年">
+            <a href="javascript:void (null)" (click)="jobtype('志愿者')">志愿者</a>
+            <a href="javascript:void (null)" (click)="jobtype('救生员')">救生员</a>
+            <a href="javascript:void (null)" (click)="jobtype('实习生')">实习生</a>
+            <a href="javascript:void (null)" (click)="jobtype('社会义工')">社会义工</a>
+          </div>
+          <div role="tabpanel" class="tab-pane zhiwei-a" id="其他职位">
+            <a href="javascript:void (null)" (click)="jobtype('临时工')">临时工</a>
+            <a href="javascript:void (null)" (click)="jobtype('其他')">其他</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div>
+        <span><a href="javascript:void (null)" style="margin-left: 0px;color: black;text-decoration: none;margin-left: 20px;width: 20px;height: 15px">地区:</a></span>
+      </div>
+      <div class="diqu" >
+        <ul>
+
+          <li><a href="javascript:void (null)" class="diqu-li-a" style="color: white;" (click)="workplace1('不限')">不限</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('园区')">园区</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('新区')">新区</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('平江')">平江</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('沧浪')">沧浪</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('金阊')">金阊</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('相城')">相城</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('吴中')">吴中</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('昆山')">昆山</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('太仓')">太仓</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('常熟')">常熟</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('张家港')">张家港</a></li>
+          <li><a href="javascript:void (null)" (click)="workplace1('吴江')">吴江</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="body-b" style="background-color: white;height: auto;margin-top: 10px">
+      <div class="btn-group" style="margin: 10px">
+        <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          结算方式 <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="javascript:void (null)"(click)="day('不限')">不限</a></li>
+          <li><a href="javascript:void (null)" (click)="day('日结')">日结</a></li>
+          <li><a href="javascript:void (null)" (click)="day('周结')">周结</a></li>
+          <li><a href="javascript:void (null)" (click)="day('月结')">月结</a></li>
+          <li><a href="javascript:void (null)" (click)="day('完结工')">完结工</a></li>
+          <li><a href="javascript:void (null)" (click)="day('按件结')">按件结</a></li>
+          <li><a href="javascript:void (null)" (click)="day('小时结')">小时结</a></li>
+          <li><a href="javascript:void (null)" (click)="day('半月结')">半月结</a></li>
+        </ul>
+      </div>
+      <div class="btn-group" style="margin-top: 10px;margin: 10px">
+        <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          性别要求 <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="javascript:void (null)" (click)="sex1('全部')">全部</a></li>
+          <li><a href="javascript:void (null)" (click)="sex1('男生可做')">男生可做</a></li>
+          <li><a href="javascript:void (null)" (click)="sex1('女生可做')">女生可做</a></li>
+        </ul>
+      </div>
+      　<div class="checkbox checkbox-a" >
+      <label>
+        <input type="checkbox"(click)="money('工资保障')">工资保障
+      </label>
+    </div>
+      <div class="body-b-right">
+        <!--<button type="button" class="btn btn-default btn-xs"><a href="javascript:void (null)" (click)="time('推荐排序')">推荐排序</a></button>-->
+        <!--<button type="button" class="btn btn-default btn-xs"><a href="javascript:void (null)" (click)="time('最新发布')">最新发布</a></button>-->
+        <button type="button" class="btn btn-default btn-xs"><a href="javascript:void (null)" (click)="pay('工资最高')">工资最高</a></button>
+
+      </div>
+    </div>
+
+
+      <!--/////////////////////////////////////////////9-25-->
+    <div class="jw-c-a" style="background-color: white;
+           margin-top: 10px;width: 100%;height: 120px" *ngFor="let position of arr| paginate: { itemsPerPage: 10, currentPage: p }">
+      <div class="jw-c-left">
+        <div class="jw--c-left-top">
+          <!--<h3><a href="/position_title/:ID">{{position.jobname}}</a></h3>-->
+            <h4 (click)="toPositionDetail(position.ID)">{{position.jobname}}</h4>
+          <span >人气</span>
+        </div>
+        <div class="jw-c-left-buttom">
+          <ul class="jw-ul-a" style="padding-left: 20px; ">
+
+            <li style="padding-left: -10px"><span >工作时间:</span><a href="#" style="text-decoration: none;color: black">{{position.duration}}</a> </li>
+            <li style="margin-left: 10px"><span>兼职类型:</span>  <a href="#" style="text-decoration: none;color: black;">{{position.position}}</a> </li>
+            <br>
+
+            <li><span>工作地点:</span><a href="#" style="text-decoration: none;color: black">{{position.workplace}}&nbsp;&nbsp;</a> </li>
+            <li style="margin-left:30px"><span>招聘人数:</span>  <a href="#" style="text-decoration: none;color: black">{{position.recruitNumber}}</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="jw-c-right">
+        <div class="jw-c-right-a">
+          <span><a href="" >{{position.salary}}</a>元/天</span>
+          <span style="color: black">{{position.mode}}</span>
+
+          <a class="jw-c-right-a1" (click)="baoming(position.positionID)">报名参加</a>
+        </div>
+      </div>
+    </div>
+    <div class="fenye">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+
+  <div class="section5" style=" width:100%;height: 310px;background-color: #7A7A82">
+    <div class="div-footer">
+      <ul class="feature3"style="margin-top: 0px">
+        <li class="wow" style="visibility: visible;">
+          <a href="">友情连接:</a>
+        </li>
+        <li class="wow" style="visibility: visible;">
+          <a href="#">新东方培训</a>
+        </li>
+        <li class="wow" style="visibility: visible;">
+          <a href="#">猎户手机版</a>
+        </li>
+        <li class="wow" style="visibility: visible;">
+          <a href="#">职位大全</a>
+        </li>
+        <li class="wow" style="visibility: visible;">
+          <a href="#">北京兼职</a>
+        </li>
+        <li class="wow" style="visibility: visible;">
+          <a href="#"> 苏州兼职</a>
+        </li>
+        <li class="wow" style="visibility: visible;">
+          <a href="#">上海兼职</a>
+        </li>
+        <li class="wow" style="visibility: visible;">
+          <a href="#">杭州兼职</a>
+        </li>
+        <li class="wow" style="visibility: visible;">
+          <a href="#">北京兼职</a>
+        </li>
+        <li class="wow" style="visibility: visible;">
+          <a href="#">郑州兼职</a>
+        </li>
+        <li class="wow" style="visibility: visible;">
+          <a href="#">广州兼职</a>
+        </li>  <li class="wow" style="visibility: visible;">
+        <a href="#">深圳兼职</a>
+      </li>  <li class="wow" style="visibility: visible;">
+        <a href="#">太原兼职</a>
+      </li>  <li class="wow" style="visibility: visible;">
+        <a href="#">贵阳兼职</a>
+      </li>  <li class="wow" style="visibility: visible;">
+        <a href="#">大连兼职</a>
+      </li>  <li class="wow" style="visibility: visible;">
+        <a href="#">郑州兼职</a>
+      </li>  <li class="wow" style="visibility: visible;">
+        <a href="#">合肥兼职</a>
+      </li>  <li class="wow" style="visibility: visible;">
+        <a href="#">天津兼职</a>
+      </li>  <li class="wow" style="visibility: visible;">
+        <a href="#">昆明兼职</a>
+      </li>  <li class="wow" style="visibility: visible;">
+        <a href="#">洛阳兼职</a>
+      </li>
+        <li class="wow" style="visibility: visible; ">
+          <a href="#"class="glyphicon glyphicon-chevron-right"></a>
+      </ul>
+    </div>
+    <div>
+      <ul class="feature4"style="margin-top: 0px">
+        <li class="wow3" style="visibility: visible;margin-left: -170px">
+          <span><a href=""><img src="../../assets/images/1.jpg" alt=""style="width: 50px;height: 40px;"></a></span>
+        </li>
+        <li class="wow3" style="visibility: visible;margin-left: -70px;">
+          <span><a href=""style="font-weight: 900;font-size: xx-large;color: white;width: 200px;">猎户兼职</a></span>
+        </li>
+        <li class="wow3" style="visibility: visible;">
+          <a href="">关于我们</a>
+        </li>
+        <li class="wow3" style="visibility: visible;">
+          <a href="#">猎户创陪生</a>
+        </li>
+        <li class="wow3" style="visibility: visible;">
+          <a href="#">斗米资讯</a>
+        </li>
+        <li class="wow3" style="visibility: visible;">
+          <a href="#">有偿服务</a>
+        </li>
+        <li class="wow3" style="visibility: visible;">
+          <a href="#">帮助中心</a>
+        </li>
+      </ul>
+    </div>
+    <div class="gongsi">
+      <ul>
+        <br>
+        <li><a href="" >公司简介</a></li>
+        <br>
+        <li><a href="">猎户历程</a></li>
+        <br>
+        <li><a href="">加入猎户</a></li>
+        <br>
+        <li><a href="">联系猎户</a></li>
+      </ul>
+    </div>
+    <div class="hotline" >
+      <p>客服热线</p>
+      <p style="font-size: 13px">400-733-3300</p>
+      <p>合作邮箱</p>
+      <p>ecom#liehu.com</p>
+    </div>
+    <div class="footer-right2">
+      <p>扫描关注公众号</p>
+      <p><img src="../../assets/images/qrcode_2.PNG" alt="" width="100px" height="100px"></p>
+    </div>
+    <p style="width: 100%;height: 20px;color: #4E4E4E;text-align: center;margin-top: -9px">高博出品</p>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,52 @@
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+.hearde{
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  float: left;
+}
+.imgs{
+  background: url("../../../assets/images/logo.png");
+}
+
+
+#preview, .img, img
+{
+  width:200px;
+  height:200px;
+}
+#preview
+{
+  border:1px solid #000;
+}
+
+
+
+
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.jobname{
+  margin-left: -40px;
+  width: 100px;
+  height: 100px;
+}
+.jobname1{
+  margin-left: -40px;
+  width: 300px;
+  height: 30px;
+}
+.sel{
+  width: 200px;
+  height: 30px;
+}
+.nav-divs{
+  margin-top: 20px;
+}
+.subbtn{
+  margin: 20px auto;
+}

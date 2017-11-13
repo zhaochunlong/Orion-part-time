@@ -1,0 +1,21 @@
+nav{
+  height: 80px;
+  line-height: 80px;
+  font-size: 18px;
+}
+.leftlogo{
+  margin-left: 100px;
+  width: 300px;
+  height: 80px;
+}
+.logo{
+  width: 80px;
+  height: 80px;
+}
+li{
+  margin-top: 20px;
+}
+.fontsi{
+  font-size: 25px;
+  color: #2aabd2;
+}

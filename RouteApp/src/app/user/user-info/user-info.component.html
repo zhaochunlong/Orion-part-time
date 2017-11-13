@@ -1,0 +1,129 @@
+<div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color: white">
+  <div [hidden]="!submitted">
+    <h4>请您完善个人信息</h4>
+    <form *ngIf="active" (ngSubmit)="onSubmit()" #siteForm="ngForm" class="form-inline">
+      <!--双向绑定在此呈现--------diagnostic -->
+      <!--{{diagnostic}}-->
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <label for="username" class="col-lg-2">姓名:</label>
+        <input type="text"style="width: 260px;margin-left: -75px" class="form-control col-lg-3" id="username" required [(ngModel)]="model.name" name="name" #name="ngModel" placeholder="请输入您的姓名">
+      </div>
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <label for="sex" class="col-lg-2">性别:</label>
+        <input type="text" class="form-control col-lg-3 jobname1" id="sex" required [(ngModel)]="model.sex" name="name" #name="ngModel" placeholder="以便于您更好选择">
+      </div>
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <label for="age" class="col-lg-2">年龄:</label>
+        <input type="text" class="form-control col-lg-3 jobname1" id="age" required [(ngModel)]="model.age" name="name" #name="ngModel">
+      </div>
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <label for="area" class="col-lg-2">地址:</label>
+        <input type="text" class="form-control col-lg-3 jobname1" id="area" required [(ngModel)]="model.area" name="name" #name="ngModel" placeholder="请输入现住址">
+      </div>
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <label for="telephone" class="col-lg-2">手机:</label>
+        <input type="text" class="form-control col-lg-3 jobname1" id="telephone" required [(ngModel)]="model.telephone" name="name" #name="ngModel" placeholder="请输入您的手机号">
+      </div>
+      <!--<div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">-->
+        <!--<label for="school" class="col-lg-2">院校:</label>-->
+        <!--<input type="text" class="form-control col-lg-3 jobname1" id="school" required [(ngModel)]="model.school" name="name" #name="ngModel" placeholder="请输入毕业院校">-->
+      <!--</div>-->
+      <!--<div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">-->
+        <!--<label for="department" class="col-lg-2">学历:</label>-->
+        <!--<input type="text" class="form-control col-lg-3 jobname1" id="department" required [(ngModel)]="model.department" name="name" #name="ngModel" placeholder="请输入公司名称">-->
+      <!--</div>-->
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <label for="height" class="col-lg-2">身高:</label>
+        <input type="text" class="form-control col-lg-3 jobname1" id="height" required [(ngModel)]="model.height" name="name" #name="ngModel">
+      </div>
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <label for="width" class="col-lg-2">体重:</label>
+        <input type="text" class="form-control col-lg-3 jobname1" id="width" required [(ngModel)]="model.width" name="name" #name="ngModel">
+      </div>
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <label for="strong" class="col-lg-2">特长:</label>
+        <input type="text" style="width: 350px;margin-left: -75px" class="form-control col-lg-3" id="strong" required [(ngModel)]="model.strong" name="name" #name="ngModel" placeholder="请输入">
+      </div>
+      <div class="form-group nav-divs  col-xs-12 col-sm-12 col-md-12 col-lg-12 subbtn">
+        <!--<button type="button" class="btn btn-default col-xs-offset-4" (click)="newSite()">添加新的身份信息</button>-->
+        <button type="submit" class="btn btn-default" (click)="submitted=false">确认</button>
+      </div>
+    </form>
+  </div>
+  <div [hidden]="submitted">
+    <h2>您的资料如下:</h2>
+    <div class="row">
+      <div class="col-xs-2">姓名:</div>
+      <div class="col-xs-10  pull-left">{{ model.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">性别:</div>
+      <div class="col-xs-10 pull-left">{{ model.sex }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">年龄:</div>
+      <div class="col-xs-10 pull-left">{{ model.age }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">地址:</div>
+      <div class="col-xs-10 pull-left">{{ model.area }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">手机：</div>
+      <div class="col-xs-10 pull-left">{{ model.telephone }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">院校：</div>
+      <div class="col-xs-10 pull-left">{{ model.school }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">学历：</div>
+      <div class="col-xs-10 pull-left">{{ model.department }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">身高:</div>
+      <div class="col-xs-10 pull-left">{{ model.height }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">体重:</div>
+      <div class="col-xs-10 pull-left">{{ model.width }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">特长:</div>
+      <div class="col-xs-10 pull-left">{{ model.strong }}</div>
+    </div>
+    <br>
+    <button class="btn btn-default" (click)="submitted=true">编辑信息</button>
+    <button class="btn btn-default" (click)="addUserInfo(model)">提交</button>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<!--<div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color: white">-->
+<!--<div class="row">-->
+<!--<h4 style="margin-left: 15px"><b>基本信息</b></h4>-->
+<!--&lt;!&ndash;上传头像&ndash;&gt;-->
+<!--<div class="col-lg-2 dowphead"><b>上传头像:</b></div>-->
+<!--<form id="myPic">-->
+<!--&lt;!&ndash;<div class="dimg col-xs-12 col-lg-12">&ndash;&gt;-->
+<!--<div class="hearde">-->
+<!--<img src="{{userHead}}" class="imagss" alt="userhead">-->
+<!--<div class="butn" style=" width: 70px;height: 30px;">-->
+<!--<span class="headspan">更换头像</span>-->
+<!--</div>-->
+<!--<input type="file" class="userIcon" name="userIcon" accept="image/*">-->
+
+<!--</div>-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</form>-->
+<!--　　&lt;!&ndash;用for属性绑定file控件&ndash;&gt; 　　-->
+
+<!--</div>-->
+
+<!--</div>-->

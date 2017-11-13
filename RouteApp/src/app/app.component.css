@@ -1,0 +1,90 @@
+.login_btn{
+  background-color: #FF9933;
+}
+.cancel_btn{
+  background-color: darkgrey;
+}
+/*.chang{*/
+  /*overflow: hidden;*/
+/*}*/
+
+.prompt{
+  color: #b81e18;
+}
+
+.login_title{
+  color: #ea932e;
+}
+.login_res{
+  color: red;
+  font-size: 1.2em;
+  /*margin-bottom: 30px;*/
+}
+.btnf{
+  height: 60px;
+  border: none;
+  background-color: #fafafa;
+  padding: 0;
+}
+.modcs{
+
+}
+.lrbtn{
+  height: 40px;
+  line-height: 40px;
+}
+label{
+  color: #ffc816;
+}
+
+input{
+  /*width: 500px;*/
+  border: none;
+  border-bottom: 1px solid #afafaf;
+  border-radius: 0px;
+  line-height: 0px;
+  box-shadow: none;
+}
+.modal-body{
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+nav{
+  height: 80px;
+  line-height: 80px;
+  font-size: 18px;
+}
+.cont{
+  height: 80px;
+}
+.leftlogo{
+  margin-left: 100px;
+  width: 300px;
+  height: 80px;
+}
+.logo{
+  width: 80px;
+  height: 80px;
+}
+li{
+  margin-top: 20px;
+}
+.fontsi{
+  font-size: 25px;
+  color: #2aabd2;
+}
+.dropdown{
+  margin-right:-10px;
+  line-height: 30px;
+  width: 120px;
+  text-align: center;
+  background-color: gainsboro;
+  margin-top: -10px;
+}
+#block{
+  cursor: pointer;
+  position: relative;
+  top:-10px;
+}
+

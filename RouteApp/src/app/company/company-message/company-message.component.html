@@ -1,0 +1,93 @@
+<div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color: rgba(255,255,255,0.46)">
+  <div [hidden]="!submitted">
+    <h4>请您完善公司信息</h4>
+    <form *ngIf="active" (ngSubmit)="onSubmit()" #siteForm="ngForm" class="form-inline">
+      <!--{{diagnostic}}-->
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <label for="logo" class="col-lg-2 hearde">公司logo:</label>
+        <!--<div style="width: 100px;float: left"></div>-->
+        <div class="hearde"></div>
+        <input type="file" class="form-control" id="logo" name="logo" style="opacity: 0;margin-top: 0px;margin-left: -100px">
+        　　<!--用for属性绑定file控件-->
+      </div>
+
+
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <label for="name" class="col-lg-2">公司名称:</label>
+        <input type="text" class="form-control col-lg-3 jobname1" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel" placeholder="请输入公司名称">
+      </div>
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <label for="employer" class="col-lg-3">雇主姓名:</label>
+        <input type="text" min="2000-12-31" class="form-control sel col-lg-3" id="employer" required [(ngModel)]="model.employer" name="employer" placeholder="请输入负责人/雇主姓名">
+      </div>
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <label for="recommend" class="col-lg-3">行业类型： </label>
+        <select class="form-control sel  col-lg-3" id="recommend" required [(ngModel)]="model.recommend" name="recommend">
+          <option *ngFor="let p of recommends" [value]="p.id">{{p.name}}</option>
+        </select>
+      </div>
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <label for="city" class="col-lg-3">所在地区：</label>
+        <input type="text" class="form-control sel col-lg-3" id="city" required [(ngModel)]="model.city" name="city" placeholder="请输入所在城市">
+      </div>
+      <!--min="2000-01-02"-->
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <label for="recruit" class="col-lg-3">公司简称：</label>
+        <input type="text" class="form-control sel col-lg-3" id="recruit" required [(ngModel)]="model.recruit" name="recruit" placeholder="需要与执照名称保持一致">
+      </div>
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <label for="site" class="col-lg-3">详细地址：</label>
+        <input type="text" class="form-control sel col-lg-3" id="site" required [(ngModel)]="model.site" name="site" placeholder="请输入公司详细地址">
+      </div>
+
+      <div class="form-group nav-divs col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <label for="details" class="col-lg-2">公司介绍：</label>
+        <textarea id="details" cols="100" rows="10"  class="form-control col-lg-10" required [(ngModel)]="model.details" name="details" placeholder="请输入详细信息及介绍"></textarea>
+      </div>
+      <div class="form-group nav-divs  col-xs-12 col-sm-12 col-md-12 col-lg-12 subbtn">
+        <button type="button" class="btn btn-default col-xs-offset-4" (click)="newSite()">添加新的身份信息</button>
+        <button type="submit" class="btn btn-default" (click)="submitted=false">提交</button>
+      </div>
+    </form>
+  </div>
+  <div [hidden]="submitted" style="margin-bottom: 50px">
+    <h2>你正要提交的信息如下:</h2>
+    <div class="row">
+      <div class="col-xs-2">公司logo:</div>
+      <div class="col-xs-10  pull-left">{{ model.logo }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">公司名称:</div>
+      <div class="col-xs-10  pull-left">{{ model.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">雇主姓名:</div>
+      <div class="col-xs-10 pull-left">{{ model.employer }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">行业类型:</div>
+      <div class="col-xs-10 pull-left">{{ model.recommend }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">所在地区:</div>
+      <div class="col-xs-10 pull-left">{{ model.city }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">公司简称：</div>
+      <div class="col-xs-10 pull-left">{{ model.recruit }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">详细地址：</div>
+      <div class="col-xs-10 pull-left">{{ model.site }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">公司介绍:</div>
+      <div class="col-xs-10 pull-left">{{ model.details }}</div>
+    </div>
+    <br>
+    <button class="btn btn-default" (click)="newSite()">取消</button>
+    <button class="btn btn-default" (click)="submitted=true">编辑信息</button>
+    <button class="btn btn-default" (click)="addcompany(model)">提交</button>
+  </div>
+
+</div>

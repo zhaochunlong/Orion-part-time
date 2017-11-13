@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <!--各个小组件的row带有背景颜色-->
+    <h2>企业管理</h2>
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+      <ul class="nav nav-pills nav-stacked" style="color: black"  >
+        <li role="presentation" ><a routerLink="./manage"><span class=" fa fa-folder-open "></span>职位管理</a></li>
+        <li role="presentation"><a routerLink="./company_profile"><span class="fa fa-hand-o-right"></span>发布职位</a></li>
+        <li role="presentation"><a routerLink="./check"><span class="fa fa-asl-interpreting (alias)"></span> 待审核</a></li>
+        <li role="presentation"><a routerLink="./in_review"><span class="fa fa-handshake-o"></span>已审核</a></li>
+        <li role="presentation"><a routerLink="./end_audit"><span class="fa fa-user-times"></span>已拒绝</a></li>
+        <li role="presentation"><a routerLink="./company_message"><span class="fa fa-file-text"></span>公司信息</a></li>
+        <!--<li role="presentation"><a routerLink="./company_profile">公司资料</a></li>-->
+      </ul>
+      <!--<div style="width: 100px;height: 100px;background-color: white">1321321</div>-->
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

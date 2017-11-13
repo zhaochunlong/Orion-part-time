@@ -1,0 +1,53 @@
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+.jobname{
+  margin-left: -40px;
+  width: 300px;
+  height: 30px;
+}
+.sel{
+  width: 200px;
+  height: 30px;
+}
+.nav-divs{
+  margin-top: 20px;
+}
+.subbtn{
+  margin: 20px auto;
+}
+
+
+.name{
+  color: #313131;
+  margin-top: 10px;
+
+}
+.name_d{
+  border-bottom: 2px solid rgba(224, 224, 224, 0.69);
+  width: 200px;
+  margin-top: 10px;
+  /*box-shadow: 1px 1px 1px black;*/
+}
+.btn_f{
+  background-color: #313131;
+  color: white;
+  width: 50px;
+}
+.btn_t{
+  background-color: #b81e18;
+  color: whitesmoke;
+  width: 50px;
+
+}
+
+
+
+
+
+
+
