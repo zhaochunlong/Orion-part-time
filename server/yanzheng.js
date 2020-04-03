@@ -7,8 +7,8 @@ var moment = require('moment');
 var http = require('http');
 var alidayuUrl = 'http://dysmsapi.aliyuncs.com/';
 var config = {
-    AppKey: 'LTAIArQCgWFWrqlf',
-    AppSecret: 'tizpPFUivlG3E8sAmrFVmZnLqQUV1x'
+    AppKey: '',
+    AppSecret: ''
 };
 var obj = {
     AccessKeyId: config.AppKey,
